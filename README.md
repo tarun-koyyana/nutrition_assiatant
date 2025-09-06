@@ -1,255 +1,70 @@
-# 🍎 Nutrition Assistant
+# Getting Started with Create React App
 
-A comprehensive full-stack web application designed to help users manage their nutrition, track meals, create personalized diet plans, and achieve their health goals.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## 🌟 Features
+## Available Scripts
 
-### User Management
-- **User Registration & Authentication**: Secure user accounts with JWT tokens
-- **Profile Management**: Track personal stats (age, weight, height, BMI)
-- **Health Goals**: Set and track fitness and nutrition objectives
-- **Dietary Preferences**: Manage allergies, restrictions, and preferences
+In the project directory, you can run:
 
-### Food Tracking
-- **Comprehensive Food Database**: 20+ common foods with detailed nutritional information
-- **Meal Logging**: Track daily food consumption with nutritional calculations
-- **Nutritional Analysis**: Real-time calorie and macro tracking
-- **Search & Filter**: Find foods by category, dietary tags, and nutritional content
+### `npm start`
 
-### Diet Planning
-- **Personalized Diet Plans**: AI-powered recommendations based on user profile
-- **Custom Meal Plans**: Create and manage weekly meal schedules
-- **Progress Tracking**: Monitor adherence to diet plans
-- **Goal-Based Recommendations**: Tailored plans for weight loss, muscle gain, or maintenance
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-### Analytics & Insights
-- **Daily Nutrition Summary**: Track calories, carbs, proteins, and fats
-- **BMI Calculator**: Monitor body mass index with health category indicators
-- **Progress Reports**: Visualize nutrition trends and goal progress
-- **Health Tips**: Personalized recommendations and nutrition advice
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-## 🏗️ Technical Architecture
+### `npm test`
 
-### Frontend
-- **React.js**: Modern UI with functional components and hooks
-- **React Router**: Client-side routing and navigation
-- **Axios**: HTTP client for API communication
-- **CSS3**: Modern styling with gradients, animations, and responsive design
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### Backend
-- **Node.js**: Server-side JavaScript runtime
-- **Express.js**: Web application framework
-- **MongoDB**: NoSQL database with Mongoose ODM
-- **JWT**: JSON Web Tokens for authentication
-- **bcryptjs**: Password hashing and security
+### `npm run build`
 
-### Database Schema
-- **User Model**: Personal information, health stats, preferences
-- **Food Model**: Nutritional data, categories, allergens
-- **Meal Model**: User meals with food items and nutritional totals
-- **DietPlan Model**: Personalized meal plans and recommendations
-- **NutritionFact Model**: Detailed nutritional tracking and analysis
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-## 🚀 Getting Started
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-### Prerequisites
-- Node.js (v14 or higher)
-- MongoDB (local installation or MongoDB Atlas)
-- npm or yarn package manager
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### Installation
+### `npm run eject`
 
-1. **Clone the repository**
-   ```bash
-   git clone <repository-url>
-   cd Nutrition-Assistant
-   ```
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-2. **Install server dependencies**
-   ```bash
-   cd server
-   npm install
-   ```
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-3. **Install client dependencies**
-   ```bash
-   cd ../client
-   npm install
-   ```
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-4. **Environment Setup**
-   
-   Create a `.env` file in the server directory:
-   ```env
-   MONGO_URI=mongodb+srv://<user>:<password>@<cluster-url>/<database-name>?retryWrites=true&w=majority
-   JWT_SECRET=your-super-secret-jwt-key
-   PORT=5000
-   ```
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-5. **Seed the database**
-   ```bash
-   cd server
-   node utils/seedData.js
-   ```
+## Learn More
 
-6. **Start the development servers**
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-   **Terminal 1 - Start the backend server:**
-   ```bash
-   cd server
-   npm start
-   ```
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-   **Terminal 2 - Start the frontend development server:**
-   ```bash
-   cd client
-   npm start
-   ```
+### Code Splitting
 
-7. **Access the application**
-   - Frontend: http://localhost:3000
-   - Backend API: http://localhost:5000
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-## 📱 User Flow
+### Analyzing the Bundle Size
 
-1. **Registration**: Create an account with personal health information
-2. **Dashboard**: View nutrition summary, BMI, and health stats
-3. **Food Tracking**: Log meals and track daily nutrition
-4. **Diet Planning**: Create personalized meal plans
-5. **Progress Monitoring**: Track goals and view analytics
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-## 🛠️ API Endpoints
+### Making a Progressive Web App
 
-### Authentication
-- `POST /api/auth/register` - User registration
-- `POST /api/auth/login` - User login
-- `GET /api/auth/me` - Get current user (protected)
-- `PUT /api/auth/me` - Update user profile (protected)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Foods
-- `GET /api/foods` - Get all foods
-- `GET /api/foods/:id` - Get specific food
-- `POST /api/foods` - Add new food (admin)
-- `PUT /api/foods/:id` - Update food (admin)
-- `DELETE /api/foods/:id` - Delete food (admin)
+### Advanced Configuration
 
-### Meals
-- `POST /api/meals` - Create meal (protected)
-- `GET /api/meals` - Get user meals (protected)
-- `GET /api/meals/daily-nutrition` - Daily nutrition summary (protected)
-- `GET /api/meals/:mealId` - Get specific meal (protected)
-- `PUT /api/meals/:mealId` - Update meal (protected)
-- `DELETE /api/meals/:mealId` - Delete meal (protected)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Diet Plans
-- `POST /api/diet-plans` - Create diet plan (protected)
-- `GET /api/diet-plans` - Get user diet plans (protected)
-- `POST /api/diet-plans/recommend` - Generate recommended plan (protected)
-- `GET /api/diet-plans/:dietPlanId` - Get specific plan (protected)
-- `PUT /api/diet-plans/:dietPlanId` - Update plan (protected)
-- `DELETE /api/diet-plans/:dietPlanId` - Delete plan (protected)
+### Deployment
 
-## 🎨 UI/UX Features
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-- **Modern Design**: Clean, intuitive interface with gradient backgrounds
-- **Responsive Layout**: Works seamlessly on desktop, tablet, and mobile
-- **Interactive Elements**: Hover effects, animations, and smooth transitions
-- **Accessibility**: Proper focus states, semantic HTML, and keyboard navigation
-- **Loading States**: Visual feedback during API calls and data processing
+### `npm run build` fails to minify
 
-## 🔒 Security Features
-
-- **JWT Authentication**: Secure token-based authentication
-- **Password Hashing**: bcryptjs for secure password storage
-- **Input Validation**: Server-side validation for all user inputs
-- **Protected Routes**: Middleware to secure sensitive endpoints
-- **Error Handling**: Comprehensive error handling and user feedback
-
-## 📊 Database Schema
-
-### User Collection
-```javascript
-{
-  username: String (required, unique),
-  email: String (required, unique),
-  password: String (hashed),
-  age: Number,
-  weight: Number (kg),
-  height: Number (cm),
-  gender: String (enum),
-  activityLevel: String (enum),
-  dietaryPreferences: [String],
-  allergies: [String],
-  healthGoals: [String],
-  createdAt: Date,
-  updatedAt: Date
-}
-```
-
-### Food Collection
-```javascript
-{
-  name: String (required, unique),
-  category: String (enum),
-  calories: Number (per 100g),
-  carbohydrates: Number,
-  proteins: Number,
-  fats: Number,
-  fiber: Number,
-  sugar: Number,
-  vitamins: Object,
-  minerals: Object,
-  allergens: [String],
-  dietaryTags: [String],
-  description: String,
-  isCommon: Boolean
-}
-```
-
-## 🚀 Deployment
-
-### Backend Deployment (Heroku)
-1. Create Heroku app
-2. Set environment variables
-3. Deploy using Git
-4. Configure MongoDB Atlas connection
-
-### Frontend Deployment (Netlify/Vercel)
-1. Build the React app: `npm run build`
-2. Deploy build folder to hosting platform
-3. Configure environment variables
-4. Set up custom domain (optional)
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests if applicable
-5. Submit a pull request
-
-## 📝 License
-
-This project is licensed under the MIT License.
-
-## 🆘 Support
-
-For support and questions:
-- Create an issue in the repository
-- Contact the development team
-- Check the documentation
-
-## 🔮 Future Enhancements
-
-- **Mobile App**: React Native version
-- **Social Features**: Share meals and progress with friends
-- **Barcode Scanner**: Scan food products for automatic logging
-- **AI Recommendations**: Machine learning for personalized suggestions
-- **Integration**: Connect with fitness trackers and health apps
-- **Advanced Analytics**: Detailed nutrition reports and insights
-- **Recipe Database**: User-generated and curated recipes
-- **Meal Prep Planning**: Weekly meal preparation guides
-
----
-
-**Built with ❤️ for better health and nutrition tracking** 
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
