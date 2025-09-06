@@ -1,0 +1,55 @@
+[
+  {
+    "name": "Breakfast",
+    "foods": [
+      {
+        "foodName": "Oatmeal",
+        "quantity": 1,
+        "unit": "bowl"
+      },
+      {
+        "foodName": "Banana",
+        "quantity": 1,
+        "unit": "piece"
+      }
+    ],
+    "time": "08:00"
+  },
+  {
+    "name": "Lunch",
+    "foods": [
+      {
+        "foodName": "Grilled Chicken",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "foodName": "Rice",
+        "quantity": 1,
+        "unit": "cup"
+      },
+      {
+        "foodName": "Salad",
+        "quantity": 1,
+        "unit": "bowl"
+      }
+    ],
+    "time": "13:00"
+  },
+  {
+    "name": "Dinner",
+    "foods": [
+      {
+        "foodName": "Paneer Curry",
+        "quantity": 100,
+        "unit": "g"
+      },
+      {
+        "foodName": "Chapati",
+        "quantity": 2,
+        "unit": "piece"
+      }
+    ],
+    "time": "20:00"
+  }
+]
